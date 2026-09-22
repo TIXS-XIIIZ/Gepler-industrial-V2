@@ -1,0 +1,6 @@
+{
+  "name": "Gepler Industrial",
+  "description": "Gepler Industrial - High-performance custom engineering for Web, Mobile Applications, Industrial IoT, and Applied AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
