@@ -22,12 +22,12 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, onLanguageChange }) => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 transition-colors duration-200 bg-[#08090C] border-b border-zinc-800/80 shadow-md py-3.5">
+    <header id="main-navbar" className="fixed top-0 left-0 right-0 z-50 transition-colors duration-200 bg-white/95 backdrop-blur-md border-b border-zinc-200/90 shadow-xs py-3.5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo Brand on Dark Midnight Background */}
+          {/* Logo Brand on White Background */}
           <a href="#" className="flex items-center group">
-            <GeplerLogo variant="full" size="sm" animated={true} interactive={false} theme="dark" />
+            <GeplerLogo variant="full" size="sm" animated={true} interactive={false} theme="light" />
           </a>
 
           {/* Desktop Nav Links */}
@@ -36,7 +36,7 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, onLanguageChange }) => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-semibold transition-colors relative py-1 text-zinc-300 hover:text-white after:w-0 after:h-0.5 after:bg-[#FF5715] after:absolute after:bottom-0 after:left-0 after:transition-all hover:after:w-full"
+                className="text-sm font-semibold transition-colors relative py-1 text-zinc-600 hover:text-zinc-950 after:w-0 after:h-0.5 after:bg-[#FF5715] after:absolute after:bottom-0 after:left-0 after:transition-all hover:after:w-full"
               >
                 {link.label}
               </a>
@@ -46,13 +46,13 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, onLanguageChange }) => {
           {/* Right Action Area */}
           <div className="flex items-center gap-3">
             {/* Language Switcher */}
-            <div className="flex items-center p-0.5 rounded-lg border text-xs font-bold transition-colors bg-zinc-900 border-zinc-800">
+            <div className="flex items-center p-0.5 rounded-lg border text-xs font-bold transition-colors bg-zinc-100 border-zinc-200/80">
               <button
                 onClick={() => onLanguageChange('th')}
                 className={`px-2.5 py-1 rounded-md transition-all cursor-pointer ${
                   lang === 'th'
-                    ? 'bg-zinc-800 text-white shadow-xs'
-                    : 'text-zinc-400 hover:text-zinc-200'
+                    ? 'bg-white text-zinc-950 shadow-xs'
+                    : 'text-zinc-500 hover:text-zinc-900'
                 }`}
               >
                 TH
@@ -61,8 +61,8 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, onLanguageChange }) => {
                 onClick={() => onLanguageChange('en')}
                 className={`px-2.5 py-1 rounded-md transition-all cursor-pointer ${
                   lang === 'en'
-                    ? 'bg-zinc-800 text-white shadow-xs'
-                    : 'text-zinc-400 hover:text-zinc-200'
+                    ? 'bg-white text-zinc-950 shadow-xs'
+                    : 'text-zinc-500 hover:text-zinc-900'
                 }`}
               >
                 EN
@@ -81,7 +81,7 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, onLanguageChange }) => {
             {/* Mobile Hamburger Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg transition-colors cursor-pointer text-zinc-200 hover:bg-zinc-800"
+              className="lg:hidden p-2 rounded-lg transition-colors cursor-pointer text-zinc-700 hover:bg-zinc-100"
               aria-label="Toggle Navigation"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -90,14 +90,14 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, onLanguageChange }) => {
         </div>
       </div>
 
-      {/* Mobile Drawer Menu on Pure Dark Canvas */}
+      {/* Mobile Drawer Menu on Clean Light Canvas */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-[#08090C] border-b border-zinc-800 px-4 pt-3 pb-6 shadow-2xl"
+            className="lg:hidden bg-white border-b border-zinc-200 px-4 pt-3 pb-6 shadow-xl"
           >
             <div className="flex flex-col gap-3">
               {navLinks.map((link) => (
@@ -105,12 +105,12 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, onLanguageChange }) => {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="px-3 py-2 text-base font-semibold text-zinc-200 hover:bg-zinc-900 rounded-lg transition-colors"
+                  className="px-3 py-2 text-base font-semibold text-zinc-700 hover:bg-zinc-100 hover:text-zinc-950 rounded-lg transition-colors"
                 >
                   {link.label}
                 </a>
               ))}
-              <div className="pt-3 border-t border-zinc-800 flex flex-col gap-2">
+              <div className="pt-3 border-t border-zinc-200 flex flex-col gap-2">
                 <a
                   href="#configurator"
                   onClick={() => setMobileMenuOpen(false)}
