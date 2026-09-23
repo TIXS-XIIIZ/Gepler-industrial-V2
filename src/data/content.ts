@@ -14,10 +14,10 @@ export const content = {
     hero: {
       badge: 'Bespoke Engineering Studio',
       titleHighlight: 'Web • App • IoT • AI',
-      headline1: 'ออกแบบระบบเทคโนโลยีครบวงจร',
-      headline2: 'สร้างได้ทุกโจทย์ ตามที่คุณต้องการ',
+      headline1: 'รับพัฒนาระบบเทคโนโลยีตามโจทย์',
+      headline2: 'เลือกทำเฉพาะด้าน หรือผสมผสานได้ตามต้องการ',
       subheadline:
-        'Gepler Industrial พัฒนาเว็บ แอพพลิเคชัน ระบบ IoT อุตสาหกรรม และ AI อัจฉริยะแบบ 100% Custom-built ยกระดับธุรกิจของคุณด้วยสถาปัตยกรรมระดับพรีเมียม ไร้ข้อจำกัด',
+        'Gepler Industrial รับพัฒนาระบบเฉพาะทาง 4 ด้าน: Web Platform, Mobile App, Industrial IoT และ Applied AI ไม่บังคับทำรวมเป็นก้อนเดียว ลูกค้าสามารถเลือกพัฒนาเฉพาะระบบที่ต้องการ หรือต่อยอดเชื่อมโยงกันได้ตามความเหมาะสมของธุรกิจ',
       ctaPrimary: 'คำนวณสเปกระบบทันที',
       ctaSecondary: 'ทดลองเล่นผลงานจริง',
       fastFacts: [
@@ -28,28 +28,28 @@ export const content = {
     },
     stats: [
       { value: 'Custom', label: 'สร้างเฉพาะทาง ไร้ขีดจำกัด' },
-      { value: '4 Core', label: 'Web • Mobile • IoT • AI' },
+      { value: '4 บริการ', label: 'เลือกทำเฉพาะด้าน หรือรวมกันได้' },
       { value: 'Tier-1', label: 'มาตรฐานความปลอดภัยระดับองค์กร' },
       { value: '24/7', label: 'รองรับการทำงานอัตโนมัติไม่หยุดนิ่ง' },
     ],
     disciplines: {
       tag: 'Core Disciplines',
-      heading: '4 เสาหลักทางเทคโนโลยีของ Gepler',
-      subheading: 'เราไม่ได้ทำแค่ซอฟต์แวร์ทั่วไป แต่หลอมรวมฮาร์ดแวร์ ซอฟต์แวร์ และปัญญาประดิษฐ์ให้ทำงานเป็นหนึ่งเดียว',
+      heading: '4 รูปแบบบริการทางวิศวกรรมของ Gepler',
+      subheading: 'เราเชี่ยวชาญทั้ง 4 ด้านอย่างลึกซึ้ง ลูกค้าสามารถเลือกพัฒนาเฉพาะระบบที่ต้องการ ไม่ว่าจะเป็นเว็บ แอป IoT หรือ AI โดยไม่ต้องผูกมัดสร้างทั้งหมดพร้อมกัน',
     },
     showcase: {
       tag: 'Interactive Showcase',
       heading: 'ห้องทดลองผลงานเชิงโต้ตอบ',
-      subheading: 'สัมผัสประสบการณ์จริง ลองปรับค่า ควบคุมเซ็นเซอร์ และทดสอบระบบจำลองที่เราพัฒนาขึ้น',
+      subheading: 'สัมผัสการทำงานจริงของระบบทั้ง 4 ด้าน แต่ละบริการสามารถพัฒนาเป็นโปรเจกต์เดี่ยวหรือต่อยอดทำงานร่วมกันได้ตามที่คุณเลือก',
       instruction: 'คลิกหรือปรับสวิตช์ในหน้าจอจำลองด้านล่างเพื่อทดสอบการตอบสนองแบบเรียลไทม์',
     },
     configurator: {
       tag: 'Tailored Solution Builder',
       heading: 'ระบบจัดสเปกตามโจทย์ธุรกิจคุณ',
-      subheading: 'เพราะทุกธุรกิจมีโจทย์ไม่เหมือนกัน เลือกองค์ประกอบที่คุณต้องการเพื่อดูพิมพ์เขียวสถาปัตยกรรมทันที',
-      selectTitle: 'เลือกองค์ประกอบที่ต้องการพัฒนา',
+      subheading: 'เพราะทุกธุรกิจมีโจทย์ไม่เหมือนกัน คุณสามารถเลือกพัฒนาเฉพาะระบบเดี่ยว (เช่น เว็บอย่างเดียว หรือ IoT อย่างเดียว) หรือเลือกหลายระบบร่วมกันเพื่อประเมินสเปกเบื้องต้นได้ทันที',
+      selectTitle: 'เลือกองค์ประกอบที่ต้องการพัฒนา (เลือกเฉพาะที่ต้องการได้)',
       summaryTitle: 'พิมพ์เขียวสถาปัตยกรรม Gepler Blueprint',
-      estimatedScope: 'ระดับความซับซ้อนสถาปัตยกรรม:',
+      estimatedScope: 'ขอบเขตสถาปัตยกรรม:',
       recommendedStack: 'เทคโนโลยีที่แนะนำ:',
       btnSendSpec: 'ส่งสเปกนี้เพื่อปรึกษาวิศวกร Gepler',
     },
@@ -59,8 +59,8 @@ export const content = {
       subheading: 'ความเรียบหรู ประณีต และความทนทานระดับเครื่องจักรอุตสาหกรรม',
       items: [
         {
-          title: 'หลอมรวม Software & Hardware',
-          desc: 'ต่างจากผู้พัฒนาเว็บทั่วไป เรามีความเชี่ยวชาญทั้งวงจรอิเล็กทรอนิกส์ ไมโครคอนโทรลเลอร์ โปรโตคอลอุตสาหกรรม จนถึง Cloud Architecture ขนาดใหญ่',
+          title: 'เชี่ยวชาญ 4 ด้านชัดเจน ไม่ผูกมัดแบบเหมารวม',
+          desc: 'เรามีความพร้อมทั้งด้าน Web, Mobile App, ฮาร์ดแวร์ IoT ตลอดจน AI คุณจึงสามารถเลือกพัฒนาเฉพาะระบบที่จำเป็นได้ตรงจุด หรือเชื่อมต่อเพิ่มเติมได้เมื่อธุรกิจเติบโต',
         },
         {
           title: 'ไม่มีเทมเพลตสำเร็จรูป ทุกบรรทัดถูกออกแบบเพื่อคุณ',
@@ -86,7 +86,7 @@ export const content = {
         phone: 'เบอร์โทรศัพท์',
         company: 'ชื่อบริษัท / โครงการ',
         scope: 'ความต้องการเบื้องต้น',
-        scopePlaceholder: 'ระบุรายละเอียดคร่าวๆ เช่น ต้องการทำระบบเว็บควบคุม IoT ในโรงงานพร้อมแอปแจ้งเตือน...',
+        scopePlaceholder: 'ระบุรายละเอียดคร่าวๆ เช่น ต้องการทำเฉพาะระบบเว็บพอร์ทัล, ระบบกล่อง IoT มอนิเตอร์เครื่องจักร, โมบายแอป หรือเลือกผสมผสานหลายระบบ...',
         submit: 'ส่งข้อมูลให้ทีมวิศวกรวิเคราะห์',
         sending: 'กำลังส่งข้อมูล...',
         success: 'ขอบคุณครับ! ทีมวิศวกร Gepler ได้รับข้อมูลแล้วและจะติดต่อกลับโดยเร็วที่สุด',
@@ -112,10 +112,10 @@ export const content = {
     hero: {
       badge: 'Bespoke Engineering Studio',
       titleHighlight: 'Web • App • IoT • AI',
-      headline1: 'High-Precision Digital Engineering',
-      headline2: 'Engineered Exactly to Your Vision',
+      headline1: 'Tailored Engineering Across 4 Domains',
+      headline2: 'Choose Exactly What Your Project Needs',
       subheadline:
-        'Gepler Industrial builds high-performance bespoke web architectures, native mobile apps, industrial IoT telemetry, and custom applied AI with zero compromises.',
+        'Gepler Industrial provides bespoke engineering across 4 distinct disciplines: Web Platforms, Mobile Apps, Industrial IoT, and Applied AI. You don’t need an all-in-one package—choose standalone systems or combine them flexibly as your business grows.',
       ctaPrimary: 'Configure Your System',
       ctaSecondary: 'Test Live Simulators',
       fastFacts: [
@@ -126,28 +126,28 @@ export const content = {
     },
     stats: [
       { value: 'Bespoke', label: '100% Tailored to Client Specs' },
-      { value: '4 Core', label: 'Web • Mobile • IoT • AI Synergy' },
+      { value: '4 Disciplines', label: 'Standalone or Combined as You Need' },
       { value: 'Tier-1', label: 'Enterprise Security Architecture' },
       { value: '24/7', label: 'Engineered for Zero Downtime' },
     ],
     disciplines: {
       tag: 'Core Disciplines',
-      heading: 'The 4 Engineering Pillars of Gepler',
-      subheading: 'We bridge deep hardware interfaces, cloud scale, and intelligence into a cohesive digital engine.',
+      heading: 'The 4 Engineering Disciplines of Gepler',
+      subheading: 'Deep expertise across four specialized fields. Choose precisely the solution your project requires—whether standalone web, mobile, IoT, or AI—without unnecessary bundle overhead.',
     },
     showcase: {
       tag: 'Interactive Showcase',
       heading: 'Interactive Technology Sandbox',
-      subheading: 'Experience the responsiveness, telemetry precision, and intelligence of our production systems.',
+      subheading: 'Experience live simulators of our 4 disciplines. Each system can be developed as an independent standalone solution or interconnected as you see fit.',
       instruction: 'Interact with switches, sliders, and controls below to observe real-time system behaviors.',
     },
     configurator: {
       tag: 'Tailored Solution Builder',
       heading: 'Custom Architecture Scope Builder',
-      subheading: 'Every organization has unique demands. Combine your target requirements to generate an instant architecture blueprint.',
-      selectTitle: 'Select Target Modules',
+      subheading: 'Every organization has unique demands. Choose only the individual modules you need—standalone or multi-system—to generate an instant architecture blueprint.',
+      selectTitle: 'Select Target Modules (Pick Only What You Need)',
       summaryTitle: 'Gepler Architecture Blueprint',
-      estimatedScope: 'Architecture Tier:',
+      estimatedScope: 'Architecture Scope:',
       recommendedStack: 'Recommended Stack:',
       btnSendSpec: 'Consult With Gepler Engineers',
     },
@@ -157,8 +157,8 @@ export const content = {
       subheading: 'Luxury in digital engineering means extreme clarity, resilience, and micro-precision.',
       items: [
         {
-          title: 'Hardware & Software Convergence',
-          desc: 'Unlike standard web boutiques, we engineer microcontrollers, industrial buses (RS-485, CAN, Modbus), and modern distributed cloud architectures simultaneously.',
+          title: '4 Distinct Disciplines, Fully Modular',
+          desc: 'Whether you require a standalone web portal, a native mobile app, an industrial IoT gateway, or a dedicated AI model, we build exactly what you need without forcing an unwanted all-in-one bundle.',
         },
         {
           title: 'Zero Bloat, Zero Templates',
@@ -184,7 +184,7 @@ export const content = {
         phone: 'Phone Number',
         company: 'Company / Project Name',
         scope: 'Project Overview & Requirements',
-        scopePlaceholder: 'Briefly describe your objectives (e.g. Industrial IoT web platform with real-time monitoring and anomaly AI)...',
+        scopePlaceholder: 'Briefly describe your objectives (e.g. standalone web portal, IoT telemetry gateway, mobile app, or combined solution)...',
         submit: 'Submit Engineering Request',
         sending: 'Transmitting...',
         success: 'Received! Our senior engineering leads will review your specs and reach out promptly.',

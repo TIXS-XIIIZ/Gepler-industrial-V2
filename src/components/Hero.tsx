@@ -132,21 +132,31 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
             {/* 4 Fast Discipline Highlights */}
             <motion.div
               variants={itemVariants}
-              className="grid grid-cols-2 sm:grid-cols-4 gap-2 w-full max-w-lg mb-8"
+              className="w-full max-w-lg mb-8"
             >
-              {pillars.map((pillar) => {
-                const Icon = pillar.icon;
-                return (
-                  <a
-                    key={pillar.id}
-                    href="#disciplines"
-                    className="p-2.5 rounded-xl border border-zinc-200/80 bg-zinc-50/70 hover:bg-zinc-100/90 hover:border-zinc-300 transition-all flex items-center gap-2 text-xs font-medium text-zinc-700"
-                  >
-                    <Icon className="w-3.5 h-3.5 text-[#FF5715] shrink-0" />
-                    <span className="font-mono font-bold">{pillar.label}</span>
-                  </a>
-                );
-              })}
+              <div className="text-[11px] font-mono uppercase tracking-wider text-zinc-500 mb-2.5 flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#FF5715]" />
+                <span>
+                  {lang === 'th'
+                    ? '4 บริการหลัก • เลือกทำเฉพาะระบบ หรือรวมกันได้ตามโจทย์:'
+                    : '4 Core Services • Choose standalone or combined as needed:'}
+                </span>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                {pillars.map((pillar) => {
+                  const Icon = pillar.icon;
+                  return (
+                    <a
+                      key={pillar.id}
+                      href="#disciplines"
+                      className="p-2.5 rounded-xl border border-zinc-200/80 bg-zinc-50/70 hover:bg-zinc-100/90 hover:border-zinc-300 transition-all flex items-center gap-2 text-xs font-medium text-zinc-700"
+                    >
+                      <Icon className="w-3.5 h-3.5 text-[#FF5715] shrink-0" />
+                      <span className="font-mono font-bold">{pillar.label}</span>
+                    </a>
+                  );
+                })}
+              </div>
             </motion.div>
 
             {/* Action Buttons (CTAs) */}

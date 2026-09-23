@@ -58,23 +58,23 @@ export const ArchitectureConfigurator: React.FC<ArchitectureConfiguratorProps> =
   const distinctCategories = [hasWeb, hasApp, hasIot, hasAi].filter(Boolean).length;
 
   let tierName = {
-    th: 'ระบบเฉพาะด้านแบบตรงจุด (Focused Solution)',
-    en: 'Focused Custom Module',
+    th: 'โซลูชันเฉพาะด้านแบบตรงจุด (Single-Domain Solution)',
+    en: 'Single-Domain Custom Solution',
   };
   if (distinctCategories === 2) {
     tierName = {
-      th: 'การเชื่อมต่อข้ามสายคู่ขนาน (Dual-Core Integration)',
-      en: 'Dual-Core Hybrid Integration',
+      th: 'การเชื่อมต่อ 2 ระบบคู่ขนาน (Dual-Domain Integration)',
+      en: 'Dual-Domain Hybrid Integration',
     };
   } else if (distinctCategories === 3) {
     tierName = {
-      th: 'ระบบนิเวศอัจฉริยะแบบบูรณาการ (Tri-System Ecosystem)',
-      en: 'Integrated Enterprise Ecosystem',
+      th: 'การเชื่อมต่อ 3 ระบบผสมผสาน (Triple-Domain Integration)',
+      en: 'Triple-Domain Multi-System Integration',
     };
   } else if (distinctCategories === 4) {
     tierName = {
-      th: 'สถาปัตยกรรมอุตสาหกรรมครบวงจร (Full-Stack Cyber-Physical System)',
-      en: 'End-to-End Cyber-Physical System',
+      th: 'โซลูชันครอบคลุม 4 ด้านตามสั่ง (4-Pillar Comprehensive Suite)',
+      en: '4-Pillar Comprehensive Suite',
     };
   }
 
@@ -163,6 +163,15 @@ export const ArchitectureConfigurator: React.FC<ArchitectureConfiguratorProps> =
               </h3>
               <span className="text-xs text-zinc-500">
                 {lang === 'th' ? `เลือกแล้ว ${selectedIds.length} ส่วนประกอบ` : `${selectedIds.length} modules selected`}
+              </span>
+            </div>
+
+            <div className="p-3 rounded-xl bg-zinc-50 border border-zinc-200 text-xs text-zinc-600 flex items-start gap-2.5">
+              <span className="w-2 h-2 rounded-full bg-[#FF5715] mt-1 shrink-0" />
+              <span>
+                {lang === 'th'
+                  ? 'คุณสามารถเลือกพัฒนาเฉพาะระบบเดี่ยวที่ต้องการได้ทันที (เช่น เว็บพอร์ทัลอย่างเดียว หรือระบบ IoT อย่างเดียว) หรือเลือกผสมผสานหลายระบบตามการเติบโตของธุรกิจ'
+                  : 'You can develop standalone systems independently (such as Web only or IoT only), or combine multiple modules as your operations scale.'}
               </span>
             </div>
 
