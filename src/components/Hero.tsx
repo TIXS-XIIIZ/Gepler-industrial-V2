@@ -134,14 +134,6 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
               variants={itemVariants}
               className="w-full max-w-lg mb-8"
             >
-              <div className="text-[11px] font-mono uppercase tracking-wider text-zinc-500 mb-2.5 flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#FF5715]" />
-                <span>
-                  {lang === 'th'
-                    ? '4 บริการหลัก • เลือกทำเฉพาะระบบ หรือรวมกันได้ตามโจทย์:'
-                    : '4 Core Services • Choose standalone or combined as needed:'}
-                </span>
-              </div>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                 {pillars.map((pillar) => {
                   const Icon = pillar.icon;
@@ -149,7 +141,7 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
                     <a
                       key={pillar.id}
                       href="#disciplines"
-                      className="p-2.5 rounded-xl border border-zinc-200/80 bg-zinc-50/70 hover:bg-zinc-100/90 hover:border-zinc-300 transition-all flex items-center gap-2 text-xs font-medium text-zinc-700"
+                      className="p-2.5 rounded-xl border border-zinc-200 bg-white hover:border-[#FF5715]/60 hover:bg-orange-50/30 transition-all flex items-center gap-2 text-xs font-semibold text-zinc-800 shadow-2xs group"
                     >
                       <Icon className="w-3.5 h-3.5 text-[#FF5715] shrink-0" />
                       <span className="font-mono font-bold">{pillar.label}</span>
@@ -159,25 +151,39 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
               </div>
             </motion.div>
 
-            {/* Action Buttons (CTAs) */}
+            {/* Action Buttons (CTAs) - 2 Direct Steps for Clients */}
             <motion.div
               variants={itemVariants}
-              className="flex flex-col sm:flex-row items-center gap-3.5 w-full sm:w-auto mb-10"
+              className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto mb-4"
             >
               <a
                 href="#configurator"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-[#FF5715] hover:bg-[#e04b0f] text-white text-sm sm:text-base font-bold shadow-lg shadow-[#FF5715]/25 flex items-center justify-center gap-2 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-[#FF5715] hover:bg-[#e04b0f] text-white text-sm sm:text-base font-bold shadow-lg shadow-[#FF5715]/25 flex items-center justify-center gap-2 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer"
               >
                 <span>{content[lang].hero.ctaPrimary}</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
 
               <a
-                href="#showcase"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white hover:bg-zinc-50 text-[#0F1012] border border-zinc-300 text-sm sm:text-base font-bold shadow-2xs flex items-center justify-center gap-2 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer"
+                href="#contact"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white hover:bg-zinc-50 text-[#0F1012] border border-zinc-300 text-sm sm:text-base font-bold shadow-2xs flex items-center justify-center gap-2 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer"
               >
-                <Play className="w-3.5 h-3.5 text-[#FF5715] fill-[#FF5715]" />
                 <span>{content[lang].hero.ctaSecondary}</span>
+              </a>
+            </motion.div>
+
+            {/* Quiet Live Simulator Link */}
+            <motion.div variants={itemVariants} className="mb-8">
+              <a
+                href="#showcase"
+                className="inline-flex items-center gap-1.5 text-xs font-medium text-zinc-500 hover:text-[#FF5715] transition-colors"
+              >
+                <Play className="w-3 h-3 text-[#FF5715] fill-[#FF5715]" />
+                <span>
+                  {lang === 'th'
+                    ? 'หรือ ทดลองเล่นระบบจำลอง (Live Simulators) ↗'
+                    : 'or Test Live Interactive Simulators ↗'}
+                </span>
               </a>
             </motion.div>
 

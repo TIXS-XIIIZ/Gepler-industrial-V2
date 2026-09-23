@@ -161,17 +161,17 @@ export const ArchitectureConfigurator: React.FC<ArchitectureConfiguratorProps> =
               <h3 className="text-sm font-bold uppercase tracking-wider text-zinc-400 font-mono">
                 {content[lang].configurator.selectTitle}
               </h3>
-              <span className="text-xs text-zinc-500">
-                {lang === 'th' ? `เลือกแล้ว ${selectedIds.length} ส่วนประกอบ` : `${selectedIds.length} modules selected`}
+              <span className="text-xs text-zinc-500 font-mono">
+                {lang === 'th' ? `เลือกแล้ว ${selectedIds.length} โมดูล` : `${selectedIds.length} selected`}
               </span>
             </div>
 
-            <div className="p-3 rounded-xl bg-zinc-50 border border-zinc-200 text-xs text-zinc-600 flex items-start gap-2.5">
-              <span className="w-2 h-2 rounded-full bg-[#FF5715] mt-1 shrink-0" />
+            <div className="text-xs text-zinc-500 flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#FF5715]" />
               <span>
                 {lang === 'th'
-                  ? 'คุณสามารถเลือกพัฒนาเฉพาะระบบเดี่ยวที่ต้องการได้ทันที (เช่น เว็บพอร์ทัลอย่างเดียว หรือระบบ IoT อย่างเดียว) หรือเลือกผสมผสานหลายระบบตามการเติบโตของธุรกิจ'
-                  : 'You can develop standalone systems independently (such as Web only or IoT only), or combine multiple modules as your operations scale.'}
+                  ? 'เลือกเฉพาะโมดูลที่ต้องการได้ ไม่บังคับเลือกทุกหมวด'
+                  : 'Select standalone modules or combine freely — no forced bundles'}
               </span>
             </div>
 

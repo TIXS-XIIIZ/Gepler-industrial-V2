@@ -18,8 +18,8 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
             <GeplerLogo variant="full" size="sm" animated={false} interactive={false} />
             <p className="text-zinc-500 max-w-sm text-xs leading-relaxed">
               {lang === 'th'
-                ? 'Gepler Industrial ผู้นำด้านวิศวกรรมเทคโนโลยีเฉพาะบุคคล หลอมรวม Web, Mobile Applications, Industrial IoT และ Applied AI สำหรับองค์กรที่ต้องการความเป็นเลิศ'
-                : 'Gepler Industrial builds high-performance bespoke Web architectures, Mobile Applications, Industrial IoT telemetry, and Applied AI.'}
+                ? 'Gepler Industrial รับพัฒนาระบบเทคโนโลยีเฉพาะทาง: Web, Mobile App, Industrial IoT และ Applied AI สำหรับธุรกิจที่ต้องการความแม่นยำสูง'
+                : 'Gepler Industrial engineers bespoke Web architectures, Mobile Applications, Industrial IoT telemetry, and Applied AI.'}
             </p>
             <div className="flex items-center gap-2 pt-2">
               <span className="w-2 h-2 rounded-full bg-emerald-500" />

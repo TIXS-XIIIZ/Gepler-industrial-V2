@@ -22,36 +22,36 @@ interface PhilosophyProps {
 export const Philosophy: React.FC<PhilosophyProps> = ({ lang }) => {
   const comparison = [
     {
-      featureTh: 'สถาปัตยกรรมระบบ',
-      featureEn: 'System Architecture',
-      genericTh: 'ใช้ CMS สำเร็จรูป หรือดัดแปลงธีมเทมเพลตทั่วไป',
-      genericEn: 'Generic templates, slow bloated CMS wrappers',
-      geplerTh: 'เขียนโครงสร้างใหม่ 100% เหมาะกับโจทย์โดยเฉพาะ',
-      geplerEn: '100% Bespoke, lean, strictly typed & optimized',
+      featureTh: 'การพัฒนาโค้ด',
+      featureEn: 'Codebase',
+      genericTh: 'ใช้เทมเพลตสำเร็จรูป โค้ดส่วนเกินเยอะ',
+      genericEn: 'Generic templates, bloated plugins',
+      geplerTh: 'เขียนใหม่ 100% ตรงตามโจทย์คุณ',
+      geplerEn: '100% Bespoke, lean & optimized',
     },
     {
-      featureTh: 'การทำงานร่วมกับฮาร์ดแวร์ / IoT',
-      featureEn: 'Hardware & IoT Convergence',
-      genericTh: 'ทำได้แค่หน้าเว็บ ไม่เข้าใจวงจร บัส หรือเซ็นเซอร์',
-      genericEn: 'Web-only scope, zero low-level firmware skill',
-      geplerTh: 'ครอบคลุมครบวงจรตั้งแต่บอร์ด ไมโครคอนโทรลเลอร์ จนถึงคลาวด์',
-      geplerEn: 'Full spectrum: firmware, bus protocols, cloud ingest',
+      featureTh: 'ฮาร์ดแวร์ & IoT',
+      featureEn: 'Hardware & IoT',
+      genericTh: 'ทำเฉพาะซอฟต์แวร์ ไม่เข้าใจบอร์ด/เซ็นเซอร์',
+      genericEn: 'Software only, zero low-level hardware',
+      geplerTh: 'ครอบคลุมทั้งเซ็นเซอร์ บอร์ด เกตเวย์ และคลาวด์',
+      geplerEn: 'Full spectrum: firmware, buses & cloud',
     },
     {
-      featureTh: 'ความเร็วและการตอบสนอง',
-      featureEn: 'Latency & Performance',
-      genericTh: 'ช้าและสะดุดเมื่อมีข้อมูลปริมาณมาก',
-      genericEn: 'High latency, choked with unneeded plugins',
-      geplerTh: 'ความเร็วระดับมิลลิวินาที (<25ms) รองรับงานวิกฤต',
-      geplerEn: 'Sub-25ms response, engineered for 24/7 mission critical',
+      featureTh: 'ความยืดหยุ่นของระบบ',
+      featureEn: 'Scope Flexibility',
+      genericTh: 'บังคับซื้อแพ็กเกจใหญ่เหมารวม',
+      genericEn: 'Forced monolithic bundles',
+      geplerTh: 'เลือกทำเฉพาะระบบที่ต้องการได้อิสระ',
+      geplerEn: 'Modular: standalone or combined',
     },
     {
-      featureTh: 'ปัญญาประดิษฐ์ (AI)',
-      featureEn: 'Applied AI Deployment',
-      genericTh: 'เชื่อมต่อ API สำเร็จรูปอย่างผิวเผิน',
-      genericEn: 'Basic wrapper over external generic models',
-      geplerTh: 'ประมวลผล Edge Computer Vision และเทรนตามข้อมูลจริง',
-      geplerEn: 'Edge vision inference & tailored predictive analytics',
+      featureTh: 'ทีมผู้ดูแลงาน',
+      featureEn: 'Engineering Team',
+      genericTh: 'ผ่านนายหน้า หรือเจ้าหน้าที่ประสานงานทั่วไป',
+      genericEn: 'Non-technical account managers',
+      geplerTh: 'ปรึกษาและวางระบบกับวิศวกรโดยตรง',
+      geplerEn: 'Direct access to senior engineers',
     },
   ];
 
@@ -83,24 +83,26 @@ export const Philosophy: React.FC<PhilosophyProps> = ({ lang }) => {
         </motion.div>
 
         {/* 4 Core Pillars Grid with Staggered Scroll Entrance */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-14">
           {content[lang].philosophy.items.map((item, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.55, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="p-8 rounded-3xl bg-zinc-50 border border-zinc-200/80 shadow-2xs hover:border-zinc-300 hover:shadow-sm transition-all"
+              transition={{ duration: 0.5, delay: idx * 0.08, ease: [0.16, 1, 0.3, 1] }}
+              whileHover={{ y: -3, transition: { duration: 0.2 } }}
+              className="p-6 rounded-2xl bg-zinc-50 border border-zinc-200/80 shadow-2xs hover:border-zinc-300 transition-all flex flex-col justify-between"
             >
-              <div className="w-10 h-10 rounded-2xl bg-white border border-zinc-200 flex items-center justify-center text-xs font-mono font-bold text-[#FF5715] mb-5 shadow-2xs">
-                0{idx + 1}
+              <div>
+                <div className="w-8 h-8 rounded-xl bg-white border border-zinc-200 flex items-center justify-center text-xs font-mono font-bold text-[#FF5715] mb-4 shadow-2xs">
+                  0{idx + 1}
+                </div>
+                <h3 className="text-base font-bold text-[#0F1012] mb-2">
+                  {item.title}
+                </h3>
               </div>
-              <h3 className="text-xl font-bold text-[#0F1012] mb-3">
-                {item.title}
-              </h3>
-              <p className="text-zinc-600 text-sm leading-relaxed">
+              <p className="text-zinc-600 text-xs sm:text-sm leading-relaxed mt-2">
                 {item.desc}
               </p>
             </motion.div>
